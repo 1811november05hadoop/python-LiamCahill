@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+
+def main():
+
+	print('Welcome to an Introduction to Python')
+	print('Author: Liam Cahill')
+
+	string = 'revature'
+	print('This is the Reverse String test.')
+	reverse(string)
+	
+
+	print('This is the Acronym test.')
+	phase = 'Liam F Cahill'
+	
+
+	#Triangle Test
+	print('This is the Triangle test')
+	whichTriangle(9,10,9)
+
+
+
+	print('This is the Scrabble test.')
+	#print('Currently under construction.')
+	word = 'quickly'
+	scrabble(word)
+
+
+def reverse(string):
+	print(string[::-1])
+ 
+
+def acronym(phrase):
+	initials = ''.join([s[:1] for s in phrase.split('')])
+
+
+
+def whichTriangle(sideOne,sideTwo,sideThree):
+	if sideOne == sideTwo:
+		if sideOne == sideThree:
+			print('Triangle is equilateral.')
+	if sideOne == sideTwo:
+		if sideOne != sideThree:
+			print('Triangle is isoceles.')
+	if sideOne == sideThree:
+		if sideOne != sideTwo:
+			print('Trianlge is isoceles.')
+	if sideOne != sideTwo:
+		if sideOne != sideThree:
+			print('Triangle is scalene.') 
+
+
+score_table = {'a':1,'e':1,'i':1,'o':1,'u':1,'l':1,'n':1,'r':1,'s':1,'t':1,'d':2,'g':2,'b':3,'c':3,'m':3,'p':3,'f':4,'h':4,'v':4,'w':4,'y':4,'k':5,'j':8,'x':8,'q':10,'z':10}
+
+def scrabble(word):
+	total = 0
+	for letter in word:
+		total += score_table[letter]
+	print(total)
+
+#def armstrong(armnum):
+		
+#test case for single-digit numbers
+
+	
+
+
+if __name__=="__main__":
+	main()
